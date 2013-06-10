@@ -5,5 +5,6 @@
 double c_abs(double x);
 double c_fmod(double x, double y);
 double deg2rad(double degrees);
-
+int steps_taken(double value, double origin, double destination, int total_steps);
+char *itoap(int num);
 #endif

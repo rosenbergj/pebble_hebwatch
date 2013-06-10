@@ -10,7 +10,7 @@
 # include "cordic.h"
 #include "cmath.h"
 
-# define ANGLES_LENGTH 60
+# define ANGLES_LENGTH 50
 double angles[ANGLES_LENGTH] = {
     7.8539816339744830962E-01, 
     4.6364760900080611621E-01, 
@@ -61,17 +61,7 @@ double angles[ANGLES_LENGTH] = {
     1.4210854715202003717E-14, 
     7.1054273576010018587E-15, 
     3.5527136788005009294E-15, 
-    1.7763568394002504647E-15, 
-    8.8817841970012523234E-16, 
-    4.4408920985006261617E-16, 
-    2.2204460492503130808E-16, 
-    1.1102230246251565404E-16, 
-    5.5511151231257827021E-17, 
-    2.7755575615628913511E-17, 
-    1.3877787807814456755E-17, 
-    6.9388939039072283776E-18, 
-    3.4694469519536141888E-18, 
-    1.7347234759768070944E-18 };
+    1.7763568394002504647E-15 };
 
 /******************************************************************************/
 
@@ -185,13 +175,13 @@ double arccos_cordic ( double t, int n )
   double y1;
   double y2;
 
-  if ( 1.0 < c_abs ( t ) )
+/*  if ( 1.0 < c_abs ( t ) )
   {
     fprintf ( stderr, "\n" );
     fprintf ( stderr, "ARCCOS_CORDIC - Fatal error!\n" );
     fprintf ( stderr, "  1.0 < |T|.\n" );
     exit ( 1 );
-  }
+  }*/
 
   theta = 0.0;
   x1 = 1.0;
@@ -304,13 +294,13 @@ double arcsin_cordic ( double t, int n )
   double y1;
   double y2;
 
-  if ( 1.0 < c_abs ( t ) )
+/*  if ( 1.0 < c_abs ( t ) )
   {
     fprintf ( stderr, "\n" );
     fprintf ( stderr, "ARCSIN_CORDIC - Fatal error!\n" );
     fprintf ( stderr, "  1.0 < |T|.\n" );
     exit ( 1 );
-  }
+  }*/
 
   theta = 0.0;
   x1 = 1.0;
@@ -738,13 +728,13 @@ double sqrt_cordic ( double x, int n )
   double poweroftwo;
   double y;
 
-  if ( x < 0.0 )
+/*  if ( x < 0.0 )
   {
     fprintf ( stderr, "\n" );
     fprintf ( stderr, "SQRT_CORDIC - Fatal error!\n" );
     fprintf ( stderr, "  X < 0.\n" );
     exit ( 1 );
-  }
+  }*/
 
   if ( x == 0.0 )
   {

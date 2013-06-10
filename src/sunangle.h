@@ -11,7 +11,7 @@ double julian_day(int year, int month, int day, float utchour);
 double julian_century(int year, int month, int day, float hour);
 void jc2ymdh(double jc, int tz, int* year, int* month, int* day, float* hour);
 double time_of_elevation(double jc, int tz, float longitude, float latitude, float elev_angle, int pm);
-double elevation_angle(double jc, int tz, float longitude, float latitude);
+/*double elevation_angle(double jc, int tz, float longitude, float latitude);*/
 
 
 #endif
